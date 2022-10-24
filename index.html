@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                calcgen: '#8C71A1',
+                calcsoft: '#C4A8CE',
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/@tailwindcss/forms@0.2.1/dist/forms.min.css" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body class="flex justify-center pt-28 background">
+
+    <div>
+        <div class="items-center justify-center">
+            <div>
+                <header class="text-2xl">
+                    <div class="text-center m-5 tracking-widest uppercase text-white"> 
+                        <div>
+                            <span>
+                                Random 
+                            </span>
+                            <span class="password">
+                                Password
+                            </span> 
+                            <span>
+                                Generator
+                            </span>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            
+            <!-- GENERATED PASSWORD CONTAINER -->
+                
+                <!-- Main container -->
+            <div class="flex justify-center">
+                <div class="bg-white bg-opacity-30 space-y-4 w-96 p-6 rounded-2xl">
+
+                    <div class="boxes rounded-2xl flex gap-20 p-4">
+                        <div class="flex space-x-16 px-8" id="password-result">
+                            <span class="flex w-40 text-2xl justify-center items-center text-white">
+                                PxswSFssw78!
+                            </span>
+                            <svg 
+                                width="27" height="32" viewBox="0 0 36 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_d_1_7)">
+                                <path d="M24.75 32H12.9375C10.7578 32 9 30.2422 9 28.0625V7.25H3.9375C2.95312 7.25 2.25 8.02344 2.25 8.9375V34.8125C2.25 35.7969 2.95312 36.5 3.9375 36.5H23.0625C23.9766 36.5 24.75 35.7969 24.75 34.8125V32ZM24.75 7.8125V0.5H12.9375C11.9531 0.5 11.25 1.27344 11.25 2.1875V28.0625C11.25 29.0469 11.9531 29.75 12.9375 29.75H32.0625C32.9766 29.75 33.75 29.0469 33.75 28.0625V9.5H26.4375C25.4531 9.5 24.75 8.79688 24.75 7.8125ZM33.1875 5.63281L28.6172 1.0625C28.2656 0.710938 27.8438 0.5 27.4219 0.5H27V7.25H33.75V6.82812C33.75 6.40625 33.5391 5.98438 33.1875 5.63281Z" fill="#8C71A2"/>
+                                </g>
+                                <defs>
+                                <filter id="filter0_d_1_7" x="0.25" y="0.5" width="35.5" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset dy="2"/>
+                                <feGaussianBlur stdDeviation="1"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_7"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_7" result="shape"/>
+                                </filter>
+                                </defs>
+                            </svg>       
+                        </div>  
+                    </div>
+                
+                    <div class="p-4 boxes rounded-2xl">
+                        <section class="p-4">
+                            <div class="flex justify-center">
+                                <div class="w-full">
+                                    <input 
+                                        type="range" 
+                                        class="form-range w-full h-6 p-0 cursor-pointer bg-calcgen" 
+                                        style="accent-color:rgb(140, 113, 161);"
+                                        min="0" 
+                                        max="10" 
+                                        value="5" 
+                                        id="customRange2"
+                                    >
+                                </div>
+                            </div>
+                            <div class="flex justify-between py-2 text-white">
+                                <h2>Character Length</h2>
+                                <div id="range-result">10</div>
+                            </div>
+                        </section>
+                        
+                        <section class="px-4 pb-4 list">
+                            <div class="flex form-check gap-5">
+                                <input
+                                    type="checkbox" 
+                                    class="form-check-input appearance-none checked:outline-calcgen focus:re checked:text-calcgen border border-gray-200 rounded-xs bg-transparent checked:bg-calcgen checked:border-calcgen focus:outline-none focus:bg-calcgen mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2" 
+                                    name="UpperCase"
+                                    value="1"
+                                >
+                                <div>Include Uppercase Letters</div> 
+                            </div>  
+                            <div class="flex form-check gap-5">
+                                <input 
+                                    type="checkbox" 
+                                    class="form-check-input appearance-none checked:outline-calcgen focus:re checked:text-calcgen border border-gray-200 rounded-xs bg-transparent checked:bg-calcgen checked:border-calcgen focus:outline-none focus:bg-calcgen mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2"
+                                    name="UpperCase" 
+                                    value="1"
+        
+                                >
+                                <div>Include Lowercase Letters</div> 
+                            </div>  
+                            <div class="flex form-check gap-5">
+                                <input
+                                    type="checkbox" 
+                                    class="form-check-input appearance-none checked:outline-calcgen focus:re checked:text-calcgen border border-gray-200 rounded-xs bg-transparent checked:bg-calcgen checked:border-calcgen focus:outline-none focus:bg-calcgen mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2" 
+                                    name="UpperCase" 
+                                    value="1"
+                                >
+                                <div>Include Numbers</div> 
+                            </div>  
+                            <div class="flex form-check gap-5">
+                                <input 
+                                    type="checkbox" 
+                                    class="form-check-input appearance-none checked:outline-calcgen focus:re checked:text-calcgen border border-gray-200 rounded-xs bg-transparent checked:bg-calcgen checked:border-calcgen focus:outline-none focus:bg-calcgen mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2" 
+                                    name="UpperCase" 
+                                    value="1"
+                                >
+                                <div>Include Symbols</div> 
+                            </div>  
+                        </section>
+            
+                        <section class="px-4 pb-3 my-2 strenght mx-4 text-xs font-bold">
+                            <div class="object-top flex uppercase tracking-widest justify-center py-2 mx-auto">
+                                <h3>
+                                    Strenght Level
+                                    <span id="strenght"> 
+                                        - Medium
+                                    </span>
+                                </h3>
+                            </div>
+        
+                                <div>
+                                    <div class="flex gap-12">
+                                        <div class="border h-3 w-12 box bg-calcgen"></div>
+                                        <div class="border h-3 w-12 box bg-calcgen"></div>
+                                        <div class="border h-3 w-12 box"></div>
+                                        <div class="border h-3 w-12 box"></div>
+                                    </div>
+                                </div> 
+                        </section>
+            
+                        <section class="py-5 px-5">
+                            <div class="flex justify-center text-white generate">
+                                <button class="flex px-6 justify-center items-center uppercase space-x-2" id="generate-btn">
+                                    <span class="py-2 tracking-widest">
+                                        Generate
+                                    </span>
+                                    <svg style="color: white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16"> <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" fill="white"></path> </svg>
+                                </button>
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+            </div>    
+        </div>
+    </div>
+    <script src="index.js"></script>
+
+</body>
+</html> 
